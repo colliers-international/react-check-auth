@@ -52,7 +52,7 @@ class AuthProvider extends React.Component  {
     this.toggleLoading();
     return fetch(this.props.authUrl, options)
       .then(function(response) {
-        console.log('RCA RESPONSE', response);
+        console.log('RCA RESPONSE', JSON.stringify(response, null, 2));
         if (response.status !== 200) {
           return response.json()
           .then((r) => {
