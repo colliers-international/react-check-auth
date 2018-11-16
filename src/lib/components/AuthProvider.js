@@ -62,6 +62,7 @@ class AuthProvider extends React.Component  {
       }).then(function(json) {
         oThis.fetchSuccess(json);
       }).catch(function(ex) {
+        console.error('RCA ERROR', ex);
         oThis.fetchFail(ex);
       });
   }
